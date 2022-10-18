@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "test": "jest",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -26,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/juanssosa/GYMTECH-UDEM-BACKEND/issues"
   },
-  "homepage": "https://github.com/juanssosa/GYMTECH-UDEM-BACKEND#readme"
+  "homepage": "https://github.com/juanssosa/GYMTECH-UDEM-BACKEND#readme",
+  "devDependencies": {
+    "jest": "^29.2.1"
+  }
 }
