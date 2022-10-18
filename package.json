@@ -1,0 +1,30 @@
+{
+  "name": "backend-gymtechapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1"
+  },
+  "description": "Backend usando express para la app movil GYMTECH UDEM",
+  "main": "./bin/www",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanssosa/GYMTECH-UDEM-BACKEND.git"
+  },
+  "author": "juanssosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanssosa/GYMTECH-UDEM-BACKEND/issues"
+  },
+  "homepage": "https://github.com/juanssosa/GYMTECH-UDEM-BACKEND#readme"
+}
