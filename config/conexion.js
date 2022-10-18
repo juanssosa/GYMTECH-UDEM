@@ -1,5 +1,5 @@
-var mysql = require('mysql');
 const colors = require('colors');
+var mysql = require('mysql');
 var con = mysql.createConnection({
     host:'localhost',
     user:'root',
@@ -10,9 +10,9 @@ var con = mysql.createConnection({
 con.connect(
     (err)=>{
         if(!err){
-            console.log('Conexion con la BD establecida con exito!!!'.yellow);
+            console.log('\nConexion con la BD establecida con exito!!!'.bgBlue);
         }else{
-            console.log('Error de conexion!'.yellow);
+            console.log('\nError de conexion!'.bgBlue);
         }
     } 
 );
