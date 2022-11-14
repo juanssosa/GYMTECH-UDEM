@@ -4,15 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var reserveRouter = require('./routes/reserve');
-var medicalRecordRouter = require('./routes/medical-record');
+var indexRouter = require('./src/routes/index');
+var usersRouter = require('./src/routes/users');
+var reserveRouter = require('./src/routes/reserve');
+var medicalRecordRouter = require('./src/routes/medical-record');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));

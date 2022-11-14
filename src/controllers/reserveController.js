@@ -1,4 +1,4 @@
-var conexion = require('../config/conexion');
+var conexion = require('../../config/conexion');
 var reserveModel = require('../model/reserveModel');
 module.exports={
     reserves:function(req,res){

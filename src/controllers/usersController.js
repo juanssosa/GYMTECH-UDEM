@@ -1,4 +1,4 @@
-var conexion = require('../config/conexion');
+var conexion = require('../../config/conexion');
 var userModel = require('../model/userModel');
 module.exports={
     users:function(req,res){

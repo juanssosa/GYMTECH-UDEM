@@ -1,4 +1,4 @@
-var conexion = require('../config/conexion');
+var conexion = require('../../config/conexion');
 var medicalRecordModel = require('../model/medicalRecordModel');
 module.exports={
     medrec:function(req,res){
