@@ -5,12 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./src/routes/index');
-var usersRouter = require('./src/routes/users');
+var usersRouter = require('./src/routes/user');
 var reserveRouter = require('./src/routes/reserve');
 var medicalRecordRouter = require('./src/routes/medical-record');
 
 var app = express();
-
+app.use(express.json);
 // view engine setup
 app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
@@ -21,10 +21,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/reserve', reserveRouter);
-app.use('/medical-record', medicalRecordRouter);
+app.use('/api/user', usersRouter);
+app.use('/api/reserve', reserveRouter);
+app.use('/api/medical-record', medicalRecordRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
