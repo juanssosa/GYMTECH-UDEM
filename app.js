@@ -10,7 +10,6 @@ var reserveRouter = require('./src/routes/reserve');
 var medicalRecordRouter = require('./src/routes/medical-record');
 
 var app = express();
-app.use(express.json);
 // view engine setup
 app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
