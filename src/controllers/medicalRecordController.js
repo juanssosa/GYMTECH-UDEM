@@ -4,14 +4,15 @@ module.exports={
 
     getAllMR:function(req,res){
         medicalRecordModel.getAllMR(conexion,function(err,datos){
-            console.log('MedicalRecord Send!');
+            console.log('Historias medicas!'.bgRed);
             res.send(JSON.stringify(datos));
         });
     },
     getMRById:function(req,res){
         medicalRecordModel.getMRById(conexion, req.params.mrid, function(err, datos){
             if (err) throw err;
-            console.log('Historia medica con id '+req.params.id+'!');
+            const mr = "Historia medica con id: "+req.params.mrid+"!";
+            console.log(mr.bgRed);
             res.send(JSON.stringify(datos));
         });
     },

@@ -3,14 +3,15 @@ var reserveModel = require('../model/reserveModel');
 module.exports={
     getAllReserves:function(req,res){
         reserveModel.getAllReserves(conexion,function(err,datos){
-            console.log('Reserves Send!');
+            console.log('Reservas actuales!'.bgRed);
             res.send(JSON.stringify(datos));
         });
     },
     getReserveById:function(req,res){
         reserveModel.getReserveById(conexion, req.params.rid, function(err, datos){
             if (err) throw err;
-            console.log('Reserva con id '+req.params.rid+'!');
+            const rv = "Reserva con id: "+req.params.rid+'!';
+            console.log(rv.bgRed);
             res.send(JSON.stringify(datos));
         });
     },

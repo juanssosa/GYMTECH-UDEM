@@ -11,7 +11,8 @@ module.exports={
     getUserById:function(req,res){
         userModel.getUserById(conexion, req.params.id, function(err, datos){
             if (err) throw err;
-            console.log('Usuario con id '+req.params.id+'!');
+            const u = "Usuario con id: "+req.params.id+"!";
+            console.log(u.bgRed);
             res.send(JSON.stringify(datos));
         });
     },
